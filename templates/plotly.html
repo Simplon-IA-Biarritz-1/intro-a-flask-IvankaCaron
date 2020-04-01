@@ -1,0 +1,27 @@
+{%  extends "base.html" %}
+
+{% block title %}graph Exo 7{% endblock %}
+
+{% block content %}
+
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<H2>Statistiques du dataset Gapminder</H2>
+<p>2007</p>
+<div class="chart" id="bargraph">
+    <script>
+        var graphs = {{v | safe}};
+        Plotly.plot('bargraph', graphs,{});
+    </script>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
